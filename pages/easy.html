@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no, semangat=yes"
+      author="JosuaTuju"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../assets/vendor/jquery-ui/jquery-ui.css" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <script src="../assets/js/jquery-3.5.1.min.js"></script>
+    <script src="../assets/vendor/jquery-ui/jquery-ui.js"></script>
+    <script src="../assets/js/script.js"></script>
+  </head>
+  <body>
+    <div class="background-image"></div>
+    <div class="content">
+      <div class="row">
+        <div class="col">
+          <h1 class="text-center text-uppercase font-weight-bold">
+            Convert a Number
+          </h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <h5 class="text-center">Specify a Number - Binary to Decimal</h5>
+        </div>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col-3">
+          <div class="row">
+            <div class="col">
+              <h3 class="text-center text-capitalize font-weight-bold">
+                Score
+              </h3>
+              <div class="scoring">
+                <div class="scoreboard">
+                  <span class="score align-middle" id="score">0</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-9">
+          <div class="row">
+            <div class="col">
+              <h3 class="text-center text-capitalize font-weight-bold">
+                Time - <span id="test"></span>
+              </h3>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-3">
+              <a href="#" onclick="toggle_visibility('biner1');">
+                <div class="konteiner">
+                  <div class="kartu" id="kartu1" onclick="getCardId(event)">
+                    <div class="depan"></div>
+                    <div class="belakang">
+                      <h1>5</h1>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-3">
+              <a href="#" onclick="toggle_visibility('biner2');">
+                <div class="konteiner">
+                  <div class="kartu" id="kartu2" onclick="getCardId(event)">
+                    <div class="depan"></div>
+                    <div class="belakang">
+                      <h1>20</h1>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-3">
+              <a href="#" onclick="toggle_visibility('biner3');">
+                <div class="konteiner">
+                  <div class="kartu" id="kartu3" onclick="getCardId(event)">
+                    <div class="depan"></div>
+                    <div class="belakang">
+                      <h1>36</h1>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-3">
+              <a href="#" onclick="toggle_visibility('biner4');">
+                <div class="konteiner">
+                  <div class="kartu" id="kartu4" onclick="getCardId(event)">
+                    <div class="depan"></div>
+                    <div class="belakang">
+                      <h1>48</h1>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-3">
+              <a href="#" onclick="toggle_visibility('biner5');">
+                <div class="konteiner">
+                  <div class="kartu" id="kartu5" onclick="getCardId(event)">
+                    <div class="depan"></div>
+                    <div class="belakang">
+                      <h1>76</h1>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-3">
+              <a href="#" onclick="toggle_visibility('biner6');">
+                <div class="konteiner">
+                  <div class="kartu" id="kartu6" onclick="getCardId(event)">
+                    <div class="depan"></div>
+                    <div class="belakang">
+                      <h1>84</h1>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-3">
+              <a href="#" onclick="toggle_visibility('biner7');">
+                <div class="konteiner">
+                  <div class="kartu" id="kartu7" onclick="getCardId(event)">
+                    <div class="depan"></div>
+                    <div class="belakang">
+                      <h1>120</h1>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-3">
+              <a href="#" onclick="toggle_visibility('biner8');">
+                <div class="konteiner">
+                  <div class="kartu" id="kartu8" onclick="getCardId(event)">
+                    <div class="depan"></div>
+                    <div class="belakang">
+                      <h1>150</h1>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row" id="binerKonverter">
+        <div class="col-12">
+          <div clas="drag-drop-game row-12" id="biner1">
+            <div class="row tempat-drop d-flex justify-content-center" id="dropbiner1">
+              <div class="kotak ui-widget-header">5</div>
+              <div class="kotak ui-widget-header">=</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="0">...</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="0">...</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="1">...</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="0">...</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="1">...</div>
+            </div>
+            <div class="row pilihan-drop d-flex justify-content-center">
+              <div class="kotak ui-widget-content dragable">0</div>
+              <div class="kotak ui-widget-content dragable">1</div>
+              <div class="kotak ui-widget-content dragable">1</div>
+              <div class="kotak ui-widget-content dragable">0</div>
+              <div class="kotak ui-widget-content dragable">0</div>
+            </div>
+          </div>
+          <div clas="drag-drop-game row-12" id="biner2">
+            <div class="row tempat-drop d-flex justify-content-center" id="dropbiner2">
+              <div class="kotak ui-widget-header">20</div>
+              <div class="kotak ui-widget-header">=</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="1">...</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="0">...</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="1">...</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="0">...</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="0">...</div>
+            </div>
+            <div class="row pilihan-drop d-flex justify-content-center">
+              <div class="kotak ui-widget-content dragable">1</div>
+              <div class="kotak ui-widget-content dragable">0</div>
+              <div class="kotak ui-widget-content dragable">1</div>
+              <div class="kotak ui-widget-content dragable">1</div>
+              <div class="kotak ui-widget-content dragable">0</div>
+              <div class="kotak ui-widget-content dragable">0</div>
+              <div class="kotak ui-widget-content dragable">1</div>
+            </div>
+          </div>
+          <div clas="drag-drop-game row-12" id="biner3">
+            <div class="row tempat-drop d-flex justify-content-center" id="dropbiner3">
+              <div class="kotak ui-widget-header">36</div>
+              <div class="kotak ui-widget-header">=</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="1">...</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="0">...</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="0">...</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="1">...</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="0">...</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="0">...</div>
+            </div>
+            <div class="row pilihan-drop d-flex justify-content-center">
+              <div class="kotak ui-widget-content dragable">0</div>
+              <div class="kotak ui-widget-content dragable">1</div>
+              <div class="kotak ui-widget-content dragable">1</div>
+              <div class="kotak ui-widget-content dragable">0</div>
+              <div class="kotak ui-widget-content dragable">0</div>
+              <div class="kotak ui-widget-content dragable">0</div>
+              <div class="kotak ui-widget-content dragable">1</div>
+              <div class="kotak ui-widget-content dragable">1</div>
+            </div>
+          </div>
+          <div clas="drag-drop-game row-12" id="biner4">
+            <div class="row tempat-drop d-flex justify-content-center" id="dropbiner4">
+              <div class="kotak ui-widget-header">48</div>
+              <div class="kotak ui-widget-header">=</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="1">...</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="1">...</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="0">...</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="0">...</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="0">...</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="0">...</div>
+            </div>
+            <div class="row pilihan-drop d-flex justify-content-center">
+              <div class="kotak ui-widget-content dragable">0</div>
+              <div class="kotak ui-widget-content dragable">1</div>
+              <div class="kotak ui-widget-content dragable">1</div>
+              <div class="kotak ui-widget-content dragable">0</div>
+              <div class="kotak ui-widget-content dragable">0</div>
+              <div class="kotak ui-widget-content dragable">1</div>
+              <div class="kotak ui-widget-content dragable">0</div>
+            </div>
+          </div>
+          <div clas="drag-drop-game row-12" id="biner5">
+            <div class="row tempat-drop d-flex justify-content-center" id="dropbiner5">
+              <div class="kotak ui-widget-header">76</div>
+              <div class="kotak ui-widget-header">=</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="1">...</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="0">...</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="0">...</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="1">...</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="1">...</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="0">...</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="0">...</div>
+            </div>
+            <div class="row pilihan-drop d-flex justify-content-center">
+              <div class="kotak ui-widget-content dragable">0</div>
+              <div class="kotak ui-widget-content dragable">1</div>
+              <div class="kotak ui-widget-content dragable">1</div>
+              <div class="kotak ui-widget-content dragable">0</div>
+              <div class="kotak ui-widget-content dragable">0</div>
+              <div class="kotak ui-widget-content dragable">1</div>
+              <div class="kotak ui-widget-content dragable">0</div>
+              <div class="kotak ui-widget-content dragable">0</div>
+            </div>
+          </div>
+          <div clas="drag-drop-game row-12" id="biner6">
+            <div class="row tempat-drop d-flex justify-content-center" id="dropbiner6">
+              <div class="kotak ui-widget-header">84</div>
+              <div class="kotak ui-widget-header">=</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="1">...</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="0">...</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="1">...</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="0">...</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="1">...</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="0">...</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="0">...</div>
+            </div>
+            <div class="row pilihan-drop d-flex justify-content-center">
+              <div class="kotak ui-widget-content dragable">0</div>
+              <div class="kotak ui-widget-content dragable">1</div>
+              <div class="kotak ui-widget-content dragable">1</div>
+              <div class="kotak ui-widget-content dragable">0</div>
+              <div class="kotak ui-widget-content dragable">0</div>
+              <div class="kotak ui-widget-content dragable">1</div>
+              <div class="kotak ui-widget-content dragable">1</div>
+              <div class="kotak ui-widget-content dragable">0</div>
+              <div class="kotak ui-widget-content dragable">0</div>
+            </div>
+          </div>
+          <div clas="drag-drop-game row-12" id="biner7">
+            <div class="row tempat-drop d-flex justify-content-center" id="dropbiner7">
+              <div class="kotak ui-widget-header">120</div>
+              <div class="kotak ui-widget-header">=</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="1">...</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="1">...</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="1">...</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="1">...</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="0">...</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="0">...</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="0">...</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="0">...</div>
+            </div>
+            <div class="row pilihan-drop d-flex justify-content-center">
+              <div class="kotak ui-widget-content dragable">0</div>
+              <div class="kotak ui-widget-content dragable">1</div>
+              <div class="kotak ui-widget-content dragable">1</div>
+              <div class="kotak ui-widget-content dragable">0</div>
+              <div class="kotak ui-widget-content dragable">0</div>
+              <div class="kotak ui-widget-content dragable">1</div>
+              <div class="kotak ui-widget-content dragable">1</div>
+              <div class="kotak ui-widget-content dragable">0</div>
+              <div class="kotak ui-widget-content dragable">0</div>
+            </div>
+          </div>
+          <div clas="drag-drop-game row-12" id="biner8">
+            <div class="row tempat-drop d-flex justify-content-center" id="dropbiner8">
+              <div class="kotak ui-widget-header">150</div>
+              <div class="kotak ui-widget-header">=</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="1">...</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="0">...</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="0">...</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="1">...</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="0">...</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="1">...</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="1">...</div>
+              <div class="kotak isibiner ui-widget-header dropable" tittle="0">...</div>
+            </div>
+            <div class="row pilihan-drop d-flex justify-content-center">
+              <div class="kotak ui-widget-content dragable">0</div>
+              <div class="kotak ui-widget-content dragable">1</div>
+              <div class="kotak ui-widget-content dragable">1</div>
+              <div class="kotak ui-widget-content dragable">0</div>
+              <div class="kotak ui-widget-content dragable">0</div>
+              <div class="kotak ui-widget-content dragable">1</div>
+              <div class="kotak ui-widget-content dragable">1</div>
+              <div class="kotak ui-widget-content dragable">0</div>
+              <div class="kotak ui-widget-content dragable">0</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p id="demo"></p>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

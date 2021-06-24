@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      rel="icon"
+      href="https://getbootstrap.com/docs/4.0/assets/img/favicons/favicon.ico"
+    />
+
+    <title>Game Converter Number Sy</title>
+
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/4.0/examples/floating-labels/"
+    />
+
+    <!-- Bootstrap core CSS -->
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="./assets/css/floating-labels.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="form-signin">
+      <div class="text-center mb-4">
+        <!-- Logo Web -->
+        <img
+          class="mb-4"
+          src="./assets/img/LOGO.png"
+          alt=""
+          width="250"
+          height="200"
+        />
+
+        <!-- Judul Awal -->
+        <h1 class="h3 mb-3 font-weight-normal">
+          GAME QUIZ NUMBER SYSTEM CONVERTER
+        
+      </div>
+
+      <!-- Tombol Pilih Difficulty -->
+      <a href="#">
+        <button
+          type="button"
+          class="btn btn-success btn-block"
+          data-target="#startModal"
+          data-toggle="modal"
+        >
+          Start
+        </button>
+      </a>
+      <br />
+
+      <!-- Tombol About -->
+      <a href="#">
+        <button
+          type="button"
+          class="btn btn-primary btn-block"
+          data-toggle="modal"
+          data-target="#aboutModal"
+        >
+          About
+        </button>
+      </a>
+
+      <!-- Tahun Aplikasi -->
+      <p class="mt-5 mb-3 text-muted text-center">© 2020</p>
+    </div>
+
+    <!-- Modal About-->
+    <div
+      class="modal fade"
+      id="aboutModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Mengenai Permainan Ini
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Ini adalah permainan mengenai konversi bilangan yang mengkonversikan
+            bilangan desimal,bilang octal,bilangan hexadecimal ke bilangan
+            biner. yang perlu anda lakukan adalah menjawab soal dari semua
+            bilangan.
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Difficulty -->
+    <div
+      class="modal fade"
+      id="startModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Pilih tipe permainan
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <input type="radio" name="difficulty" id="difficulty1" />
+            <label for="difficulty1">Decimal to Biner</label><br />
+            <input type="radio" name="difficulty" id="difficulty2" />
+            <label for="difficulty2">Octal to Biner</label><br />
+            <input type="radio" name="difficulty" id="difficulty3" />
+            <label for="difficulty3">Heksadecimal to Biner</label><br />
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">
+              Close
+            </button>
+            <a href="http://www.google.com" id="myLink" onclick="myFunction()">
+              <button type="button" class="btn btn-success">Start</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      //  Cek button apa yang dipilih untuk pindah halaman
+      function myFunction() {
+        if (document.getElementById("difficulty1").checked) {
+          document.getElementById("myLink").href = "pages/easy.html";
+        } else if (document.getElementById("difficulty2").checked) {
+          document.getElementById("myLink").href = "pages/normal.html";
+        } else {
+          document.getElementById("myLink").href = "pages/hard.html";
+        }
+      }
+    </script>
+  </body>
+</html>
